@@ -16,15 +16,16 @@ const Counter = () => {
   }, [otherCounter])
 
   /*
-  const increment = (() => {
-    setCount(count + 1)
-  })
-  const decrement = (() => {
-    setCount(count - 1)
-  })
-  const incrementOtherCounter = (() => {
-    setOtherCounter(otherCounter + 1)
-  })
+    //The problem here is that any time the counter is updated, all the 3 functions are re-created again.
+    const increment = () => {
+      setCount(count + 1)
+    }
+    const decrement = () => {
+      setCount(count - 1)
+    }
+    const incrementOtherCounter = () => {
+      setOtherCounter(otherCounter + 1)
+    }
   */
 
   functionsCounter.add(increment)
