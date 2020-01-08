@@ -22,7 +22,6 @@ function App() {
 }
 
 function Toolbar(props) {
-  console.log('toolBar');
   return (
     <div>
       <ThemedButton />
@@ -30,7 +29,7 @@ function Toolbar(props) {
   );
 }
 
-function ThemedButton() {
+function ThemedButton(props) {
   const theme = useContext(ThemeContext);
   console.log(theme);
   return (
