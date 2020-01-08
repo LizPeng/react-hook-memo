@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useState, useReducer } from 'react'
 
 const initialState = {count: 0};
 
@@ -25,3 +25,13 @@ function Counter() {
 }
 
 export default Counter;
+
+// 自己实现一个useReducer
+function useReducerCreatedByMyself (reducer, initialState) {
+  const [state, setState] = useState(initialState);
+  function dispatch (action) {
+    const nextState = reducer(state, action);
+    setState(nextState)
+  }
+  return [state, dispatch];
+}
